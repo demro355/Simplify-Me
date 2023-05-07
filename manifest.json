@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Simplify-Me",
+  "description": "Make reading pages simpler",
+  "version": "1.0",
+  "icons": {
+    "16": "images/focus16x16.png",
+    "32": "images/focus32x32.png",
+    "48": "images/focus48x48.png",
+    "128": "images/focus128x128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "images/focus16x16.png",
+      "32": "images/focus32x32.png",
+      "48": "images/focus48x48.png",
+      "128": "images/focus128x128.png"
+    }
+  },
+  "permissions": ["scripting", "activeTab"],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      }
+    }
+  }
+}

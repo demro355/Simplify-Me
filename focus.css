@@ -1,0 +1,57 @@
+main > :not(:last-child),
+
+
+/* Hide all elements under the last child of main except for navigation-tree and toc-container */
+main > :last-child > :not(navigation-tree):not(.toc-container) {
+  display: yes;
+}
+
+/* Hides the header on all pages */
+body > .scaffold > :is(top-nav, navigation-rail, side-nav, footer) {
+  display: none !important;
+}
+
+/* Hides all aside elements (e.g links/images to the side of the screen) */
+aside {
+  display: none !important;
+}
+
+/* Hides all footers */
+footer {
+  display: none !important;
+}
+
+/* Hides all nav elements */
+nav {
+  display: none !important;
+}
+
+
+/* Increases font size on certain pages for better readability */
+body {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
+
+/* Apply some margin to the last child of main */
+main > :last-child {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Hide any iframes on the page (essentially hiding adverts) */
+iframe {
+  display: none !important;
+}
+
+/* Hide all content after the first article */
+article:first-of-type ~ * {
+  display: none !important;
+}
+
+/* Show the article and its immediate siblings */
+article:first-of-type,
+article:first-of-type ~ :not(hr):not(script):not(style) {
+  display: block !important;
+}
+
